@@ -10,7 +10,7 @@ int main(void)
     printf("１～5の番号を入力してください");
     scanf("%d",&a);
   }
-  printf("その人は%sです。\n",joho[a]);
+  printf("その人は%sです。\n",joho[a-1]);
   printf("あなたの好感度は？(0~100%)");
   scanf("%d",b)
   if(b==0){
@@ -19,10 +19,10 @@ int main(void)
   else if(b>0&&b<=50){
       printf("友達になれそうです。");
   }
-  else if(b>50&&b<=75){
+  else if(b<=75){
       printf("かなり親密ですね。");
   }
-  else if(b>75&&b<=99){
+  else if(b<=99){
       printf("良き友です。");
   }
   else if(b==100){
