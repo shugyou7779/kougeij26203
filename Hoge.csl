@@ -1,0 +1,38 @@
+/*何か作ろう*/
+#include <stdio.h>
+int main(void)
+{
+  int a,b;
+  char *joho[5]={"赤木","伊藤","上田","遠藤","大河内"};
+  printf("出席番号を入力してください（１～5）");
+  scanf("%d",&a);
+  while((a<1)||(a>5)){
+    printf("１～5の番号を入力してください");
+    scanf("%d",&a);
+  }
+  printf("その人は%sです。\n",joho[a]);
+  printf("あなたの好感度は？(0~100%)");
+  scanf("%d",b)
+  if(b==0){
+      printf("もう少し大人になりましょう。");
+  }
+  else if(b>0&&b<=50){
+      printf("友達になれそうです。");
+  }
+  else if(b>50&&b<=75){
+      printf("かなり親密ですね。");
+  }
+  else if(b>75&&b<=99){
+      printf("良き友です。");
+  }
+  else if(b==100){
+      printf("生涯の親友ですね。");
+  }
+  else{
+      printf("どんな関係ですか？");
+  }
+  return 0;
+}
+
+  
+  
