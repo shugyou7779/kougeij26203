@@ -1,5 +1,6 @@
-/*何か作ろう*/
+﻿/*何か作ろう*/
 #include <stdio.h>
+#include <string.h>
 int main(void)
 {
   int a,b;
@@ -7,32 +8,55 @@ int main(void)
                   "加藤","金森","加野","木藤","小池","境田","佐々木","佐藤","下門","白石",
                   "鈴木健","鈴木翔","鈴木龍","高橋","為我井","中野","丹羽","野口","橋本","服部",
                   "林","日比野","藤本","堀田","松本","水野","毛利","森下","門田","横井"};
+  char sei[3];
   printf("出席番号を入力してください（1~40）");
   scanf("%d",&a);
+　printf("あなたの性別を教えてください。");
+　scanf("%s",sei);
   while((a<1)||(a>40)){
     printf("1~40の番号を入力してください");
     scanf("%d",&a);
   }
-  printf("その人は%sです。\n",joho[a-1]);
-  printf("あなたの好感度は？(0~100%)");
-  scanf("%d",b)
-  if(b==0){
-      printf("もう少し大人になりましょう。");
-  }
-  else if(b>0&&b<=50){
-      printf("友達になれそうです。");
-  }
-  else if(b<=75){
-      printf("かなり親密ですね。");
-  }
-  else if(b<=99){
-      printf("良き友です。");
-  }
-  else if(b==100){
-      printf("生涯の親友ですね。");
+    printf("その人は%sです。\n",joho[a-1]);
+    printf("あなたの好感度は？(0~100%)");
+    scanf("%d",b)
+  if(strcmp(sei,joho[a-1].sex)==0){
+    if(b==0){
+        printf("もう少し大人になりましょう。");
+    }
+    else if(b>0&&b<=50){
+        printf("友達になれそうです。");
+    }
+    else if(b<=75){
+        printf("かなり親密ですね。");
+    }
+    else if(b<=99){
+        printf("良き友です。");
+    }
+    else if(b==100){
+        printf("生涯の親友ですね。");
+    }
+    else{
+        printf("どんな関係ですか？");
   }
   else{
-      printf("どんな関係ですか？");
+    if(b==0){
+        printf("もう少し大人になりましょう。");
+    }
+    else if(b>0&&b<=50){
+        printf("友達になれそうです。");
+    }
+    else if(b<=75){
+        printf("かなり親密ですね。");
+    }
+    else if(b<=99){
+        printf("良き友です。");
+    }
+    else if(b==100){
+        printf("生涯の親友ですね。");
+    }
+    else{
+        printf("どんな関係ですか？");
   }
   return 0;
 }
