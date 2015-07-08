@@ -20,7 +20,7 @@ int main(void)
     printf("その人は%sです。\n",joho[a-1]);
     printf("あなたの好感度は？(0~100%)");
     scanf("%d",b)
-  if(strcmp(sei,joho[a-1].sex)==0){
+  if(strcmp(sei,joho[a-1].sex)==0){ /*同性の場合*/
     if(b==0){
         printf("もう少し大人になりましょう。");
     }
@@ -39,7 +39,7 @@ int main(void)
     else{
         printf("どんな関係ですか？");
   }
-  else{
+  else{                             /*異性の場合*/
     if(b==0){
         printf("もう少し大人になりましょう。");
     }
